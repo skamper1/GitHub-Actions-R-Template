@@ -12,4 +12,4 @@ forks_counter_element <- xml_find_first(html, ".//span[@id='repo-network-counter
 
 forks_counter <- xml_integer(forks_counter_element)
 
-forks_counter |>  writeLines(format(Sys.Date(), "%m-%Y.txt"))
+forks_counter |>  as.character() |> writeLines(format(Sys.Date(), "%m-%Y.txt"))
