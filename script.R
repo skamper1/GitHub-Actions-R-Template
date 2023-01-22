@@ -4,6 +4,8 @@ require_packages(c(
   "httr"
 ))
 
+
+# HTTP GET Request
 a <- GET("https://github.com/skamper1/GitHub-Actions-R-Template")
 
 html <- read_html(rawToChar(a$content))
